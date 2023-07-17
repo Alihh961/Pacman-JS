@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+}
+
+.map {
+    margin: 50px auto;
+    width: 960px;
+    height: 560px;
+    border: 2px solid #6158ff;
+    /* border-radius: 5px; */
+    /* background-color: #030303; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.pacman {
+    position: absolute;
+}
+
+
+.pacman-top {
+    background-color: yellow;
+    height: 37px;
+    width: 80px;
+    border-radius: 100px 100px 0 0;
+    animation: spin1 0.5s infinite linear;
+}
+
+.pacman-bottom {
+    background-color: yellow;
+    height: 37px;
+    width: 80px;
+    border-radius: 0 0 100px 100px;
+    animation: spin2 0.5s infinite linear;
+}
+
+/* Animating pacman */ 
+
+@keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-35deg);
+    }
+
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+
+.square {
+    border: 1px solid black;
+    width: 78px;
+    height: 78px;
+}
